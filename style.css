@@ -1,0 +1,750 @@
+/* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fc;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            width: 100%;
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 27px;
+            font-weight: bold;
+            color: #0866a6;
+        }
+
+        .logo span {
+            font-size: 32px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #087fba;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 680px;
+            padding: 80px 7%;
+
+            background:
+                linear-gradient(
+                    rgba(0, 48, 77, 0.75),
+                    rgba(0, 48, 77, 0.75)
+                ),
+                linear-gradient(
+                    135deg,
+                    #087fba,
+                    #023b5c
+                );
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1150px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 40px;
+        }
+
+        /* =========================
+           BOOKING BOX
+        ========================= */
+
+        .booking-box {
+            background: white;
+            color: #222;
+
+            padding: 30px;
+
+            max-width: 1100px;
+            margin: auto;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 45px rgba(0,0,0,0.25);
+
+            text-align: left;
+        }
+
+        .trip-types {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .trip-types label {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .trip-types input {
+            margin-right: 6px;
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 7px;
+        }
+
+        .field input,
+        .field select {
+            padding: 14px;
+
+            border: 1px solid #ddd;
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 14px;
+        }
+
+        .field input:focus,
+        .field select:focus {
+            border-color: #087fba;
+        }
+
+        .search-btn {
+            grid-column: 1 / -1;
+
+            padding: 15px;
+
+            background: #ff8a00;
+            color: white;
+
+            border: none;
+            border-radius: 8px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #e57500;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: #064b75;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* =========================
+           DESTINATIONS
+        ========================= */
+
+        .destinations {
+            background: white;
+        }
+
+        .destination-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .destination-card {
+            background: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .destination-image {
+            height: 200px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 75px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dff5ff,
+                    #b9e5f7
+                );
+        }
+
+        .destination-content {
+            padding: 25px;
+        }
+
+        .destination-content h3 {
+            color: #064b75;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .destination-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .destination-price {
+            color: #ff7800;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .details-btn {
+            border: none;
+
+            padding: 11px 18px;
+
+            background: #087fba;
+            color: white;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .details-btn:hover {
+            background: #064b75;
+        }
+
+        /* =========================
+           DESTINATION DETAILS
+        ========================= */
+
+        .destination-details {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0,0,0,0.75);
+
+            z-index: 2000;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        .destination-details.active {
+            display: flex;
+        }
+
+        .details-box {
+            background: white;
+
+            max-width: 800px;
+            width: 100%;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+
+            right: 20px;
+            top: 15px;
+
+            font-size: 30px;
+
+            border: none;
+
+            background: transparent;
+
+            cursor: pointer;
+
+            color: #555;
+        }
+
+        .details-box h2 {
+            color: #064b75;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .details-box h3 {
+            color: #087fba;
+            margin-top: 20px;
+            margin-bottom: 7px;
+        }
+
+        .details-box p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           WHY CHOOSE US
+        ========================= */
+
+        .features {
+            background: #f4f8fc;
+        }
+
+        .feature-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .feature {
+            background: white;
+
+            padding: 30px 20px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-7px);
+        }
+
+        .feature-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #064b75;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #064b75;
+            color: white;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #d8edf7;
+            margin-bottom: 15px;
+        }
+
+        .about-box {
+            background: rgba(255,255,255,0.12);
+
+            padding: 50px;
+
+            border-radius: 20px;
+
+            text-align: center;
+        }
+
+        .about-box .plane {
+            font-size: 80px;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-container {
+            max-width: 1050px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 35px;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: #f7fafc;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .contact-info h3,
+        .contact-form h3 {
+            color: #064b75;
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .contact-icon {
+            font-size: 25px;
+        }
+
+        .contact-item strong {
+            color: #064b75;
+        }
+
+        .contact-item p {
+            color: #666;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            padding: 14px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 15px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .send-btn {
+            width: 100%;
+
+            padding: 14px;
+
+            background: #087fba;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .send-btn:hover {
+            background: #064b75;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #032d43;
+
+            color: white;
+
+            padding: 45px 7% 20px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+
+            gap: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #b9d0dc;
+
+            text-decoration: none;
+
+            display: block;
+
+            margin-bottom: 8px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            margin-top: 35px;
+            padding: 22px 0 5px;
+            text-align: center;
+            color: #9bb3c0;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: block;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .booking-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .destination-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .booking-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .destination-grid,
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
